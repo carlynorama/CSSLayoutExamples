@@ -58,7 +58,8 @@ body {
     vertical-align: middle;
     margin: 0;
     right: 20%;
-    left: 40%;
+    /*left: min(100vw + 5px, 20%);*/
+    left: clamp(10px, 30%, 150vw + 5px);
     width: 30%;
 }
 
@@ -77,15 +78,15 @@ body {
 
 /*style*/
 .links__group {
-  background: #fa923f;
+  /*background: #fa923f;*/
   padding: 20px;
-  border: 5px solid black;
+  /*border: 5px solid black;*/
   margin: 0;
 }
 
 /*location*/
 .links__item {
-    margin: 0 16px;
+    margin: 4px 16px;
 }
 
 /*style*/
