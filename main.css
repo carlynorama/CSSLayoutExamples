@@ -13,85 +13,80 @@ body {
   }
   */
 
-/*location*/
-.banner {
-  position:fixed;
-  margin:0;
-  top:50%;
-  left:0;
+  /* https://stackoverflow.com/questions/325273/make-iframe-to-fit-100-of-containers-remaining-height
+  body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+.row-container {display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;}
+.first-row {background-color: lime; }
+.second-row { flex-grow: 1; border: none; margin: 0; padding: 0; }
+*/
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+  width: 100%; height: 100%; margin: 0; padding: 0}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: max(10%, 4rem);
   width:100%;
-  box-sizing:border-box;
-  padding: 0;
-  margin: 0;
+  background: #333333;
+  display: flex;
+  place-items: center;
+  justify-items: end;
+
 }
 
-/*location*/
-.title {
-    padding: 10px;
-    margin: 0px;
+.main-nav {
+  width:100%;
+  text-align:right;
+  /*background:pink;
+  border: 1px solid white;*/
 }
 
-/*style*/
-.title {
-  background: rgb(105, 105, 109);
-  color: white;
-  font-size: 3rem;
-  border: 5px solid black;
+.main-nav__items {
+    position:relative;
+    right:2rem;
+    list-style: none;
+    white-space: nowrap;
 }
 
-/*location*/
-.links {
-    position: relative;
-    margin: 0;
-    right: 20%;
-    left: 50%;
-    width: 30%;
-    text-align: center;
+.main-nav__item {
+    display: inline-block;
 }
 
 
-/*style*/
-.links {
-  background: #fa923f;
-  /*padding: 0.5rem  3rem;*/
-  border: 5px solid black;
-  border-top: 0px;
-}
-
-/*location*/
-.links__group {
-    width:30%;
-    padding: 0.5rem  1rem; /* needs to match the li if items not in li will flow the same. */
-    border: 0.5px solid black;
-}
-
-/*location of li items this is what a links__group is,
-but the defaults don't get over ridden without calling out the ul explicitly*/
-.links ul {
-  list-style: none;
-  padding: 0.5rem  1rem;
-  margin: 0;
-}
-
-
-/*style*/
-.links__group {
-  display: inline-block;
-}
-
-/*location*/
-.links__item {
-  padding: 0.2rem;
-  margin: 0.2rem;
-}
-
-/*style*/
-.links__item {
+.main-nav__item a {
+  text-decoration: none;
+  color:black;
   background:white;
+  padding: 0.5rem;
+  margin: 0rem 0.5rem;
   border: 5px solid black;
 }
 
-/*style*/
-.links__item a {
-    text-decoration: none;
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color: white;
+    background:orange;
+}
+
+
+.layout-frame {
+  position: absolute;
+  top: max(10%, 4rem);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*iFrames are inline by default*/
+.layout-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

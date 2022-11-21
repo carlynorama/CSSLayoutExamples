@@ -7,22 +7,28 @@
         <title>CSS Examples</title>
     </head>
     <body>
-        <div class="banner">
-            <div class="title">CSS Examples</div>
-            <div class="links">
-              <div class="links__group">
-                <p class="links__item"><a href="screen1/">Layout 1</a></p>
-                <p class="links__item"><a href="screen2/">Layout 2</a></p>
-                <p class="links__item"><a href="screen2/">Layout 3</a></p>
-              </div>
 
-              <ul class="links__group">
-                <li class="links__item"><a href=#>Not yet</a></li>
-                <li class="links__item"><a href=#>Not yet</a></li>
-                <li class="links__item"><a href=#>Not yet</a></li>
+          <div class="header">
+            <nav class="main-nav">
+              <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a target="layout-display" href="/index.html">Main</a>
+                </li>
+                <li class="main-nav__item">
+                    <a target="layout-display" href="screen1/index.html">Screen Style 1</a>
+                </li>
+                <li class="main-nav__item">
+                    <a target="layout-display" href="screen2/index.html">Screen Style 2</a>
+                </li>
+                <li class="main-nav__item">
+                    <a target="layout-display" href="screen3/index.html">Screen Style 3</a>
+                </li>
               </ul>
-            </div>
-            <img src="screens.png">
-        </div>
+            </nav>
+          </div>
+
+          <div class="layout-frame">
+            <iframe name="layout-display" title="Layout Example Display Area" src="start.html"></iframe>
+          </div>
     </body>
 </html>
