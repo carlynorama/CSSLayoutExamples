@@ -1,0 +1,97 @@
+/* html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  */
+
+/*location*/
+.banner {
+  position:fixed;
+  margin:0;
+  top:50%;
+  left:0;
+  width:100%;
+  box-sizing:border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*location*/
+.title {
+    padding: 10px;
+    margin: 0px;
+}
+
+/*style*/
+.title {
+  background: rgb(105, 105, 109);
+  color: white;
+  font-size: 3rem;
+  border: 5px solid black;
+}
+
+/*location*/
+.links {
+    position: relative;
+    margin: 0;
+    right: 20%;
+    left: 50%;
+    width: 30%;
+    text-align: center;
+}
+
+
+/*style*/
+.links {
+  background: #fa923f;
+  /*padding: 0.5rem  3rem;*/
+  border: 5px solid black;
+  border-top: 0px;
+}
+
+/*location*/
+.links__group {
+    width:30%;
+    padding: 0.5rem  1rem; /* needs to match the li if items not in li will flow the same. */
+    border: 0.5px solid black;
+}
+
+/*location of li items this is what a links__group is,
+but the defaults don't get over ridden without calling out the ul explicitly*/
+.links ul {
+  list-style: none;
+  padding: 0.5rem  1rem;
+  margin: 0;
+}
+
+
+/*style*/
+.links__group {
+  display: inline-block;
+}
+
+/*location*/
+.links__item {
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+/*style*/
+.links__item {
+  background:white;
+  border: 5px solid black;
+}
+
+/*style*/
+.links__item a {
+    text-decoration: none;
+}
