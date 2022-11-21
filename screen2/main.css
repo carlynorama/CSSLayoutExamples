@@ -50,7 +50,7 @@ body {
 }
 
 /*location*/
-.links__items {
+.links__group {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -58,7 +58,7 @@ body {
 }
 
 /*style*/
-.links__items {
+.links__group {
   background: #fa923f;
   padding: 20px;
   border: 5px solid black;
