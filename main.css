@@ -74,7 +74,6 @@ body, html {
     background:orange;
 }
 
-
 .layout-frame {
   position: absolute;
   top: max(10%, 4rem);
