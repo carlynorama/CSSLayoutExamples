@@ -25,9 +25,9 @@ function draw() {
       line(pmouseX, pmouseY, mouseX, mouseY);
     }
 
-    var a = min(frameCount, 1200);
-    var b = min(frameCount, 400);
-    ellipse(windowWidth/2, windowHeight/3, a, b);
+    var a = min(frameCount/(windowWidth/300), 1200);
+    var b = min(frameCount/(windowHeight/300), 400);
+    ellipse(windowWidth/2, windowHeight/3, b, a);
     //can't do no loop if doing mouse interactions?
     // if (frameCount > 1200) {
     //     noLoop();
