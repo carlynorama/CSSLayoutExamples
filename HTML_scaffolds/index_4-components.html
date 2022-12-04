@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+Displaying an article generally has the same parts
+1. title
+2. image
+3. teaser text
+4a. author
+4b. date and time
+
+A reusable chunk might be
+<article>
+  <header>
+	  <h3>Title</h3> //H1 - page title, H2 - Section, H3 - Content
+	  <img src="/path/to/image.jpg" alt="A descriptive alternative text for the image" />
+  </header>
+  <p>teaser/summry text</p>
+  <footer>
+	  <span>Author Name</span>
+	  <time datetime="2022-12-04">12/04/2022</time>
+  </footer>
+</article>
+
+  -->
+<html lang="en">
+  <head>
+	  <meta charset="utf-8" />
+	  <title>Woodland Creatures Gazette</title>
+  </head>
+  <body>
+    <header>
+  	  <h1>
+  		  Woodland Creatures Gazette
+  		  <span>What's on the Vine</span>
+  	  </h1>
+      <time datetime="2022-12-04">Sun, December 4th 2022</time>
+      <!-- Search  -->
+      <form action="/search" role="search">
+      	<label for="search-input">Search articles</label>
+      	<input type="search" id="search-input" placeholder="Search…" name="q" />
+      	<input type="submit" value="Submit search" />
+      </form>
+      <!-- End Search -->
+    </header>
+    <nav aria-label="Main">
+       <ul>
+         <li><a href="/news">News</a></li>
+         <li><a href="/bear-cave">Bear Cave</a></li>
+         <li><a href="/canopy-view">Canopy View</a></li>
+         <li><a href="/the-roots">The Roots</a></li>
+         <li><a href="/foraging-update">Foraging Upadate</a></li>
+       </ul>
+    </nav>
+    <main>
+  	  <section>
+  		  <h2>Top Stories</h2>
+        <article>
+          <header>
+        	  <h3>Title</h3>
+        	  <img src="/path/to/image.jpg" alt="A descriptive alternative text for the image" />
+          </header>
+          <p>teaser/summry text</p>
+          <footer>
+        	  <span>Author Name</span>
+        	  <time datetime="2022-12-04">12/04/2022</time>
+          </footer>
+        </article>
+        <!-- ... more -->
+  	  </section>
+  	  <section>
+  		  <h2>Latest News</h2>
+        <article>
+          <header>
+            <h3>Title</h3>
+            <img src="/path/to/image.jpg" alt="A descriptive alternative text for the image" />
+          </header>
+          <p>teaser/summry text</p>
+          <footer>
+            <span>Author Name</span>
+            <time datetime="2022-12-04">12/04/2022</time>
+          </footer>
+        </article>
+        <!-- ... more -->
+        <a href="/latest-news">View all articles</a>
+  	  </section>
+  	  <section>
+  		  <h2>Most Viewed</h2>
+        <ol>
+      		<li>
+      			<article><!-- article content ---></article>
+      		</li>
+      		<li>
+      			<article><!-- article content ---></article>
+      		</li>
+      		<!-- and so on… -->
+      	</ol>
+  	  </section>
+  	  <section>
+  		  <h2>What's Going on in the Canopy?</h2>
+        <article>
+          <header>
+            <h3>Title</h3>
+            <img src="/path/to/image.jpg" alt="A descriptive alternative text for the image" />
+          </header>
+          <p>teaser/summry text</p>
+          <footer>
+            <span>Author Name</span>
+            <time datetime="2022-12-04">12/04/2022</time>
+          </footer>
+        </article>
+        <!-- ... more -->
+        <a href="/canopy-view">See more of what's up</a>
+  	  </section>
+    </main>
+    <aside>
+      <h2>Subscribe to our Newsletter</h2>
+      <form action="/subscribe" method="post">
+    	  <label for="name-input">Name</label>
+    	  <input name="name" id="name-input" />
+    	  <label for="address-input">Address</label>
+    	  <input name="address" id="address-input" />
+    	  <input type="submit" value="Subscribe" />
+      </form>
+    </aside>
+    <footer>
+      <!-- label (no text visible) vs aria-labelledby (text visible, puts it in a group) https://stackoverflow.com/a/19616909/5946596 -->
+  	<div>
+  		<h2 id="footer-categories">Top Categories</h2>
+  		<nav aria-labelledby="footer-categories">
+  			<a href="#">...</a>
+  		</nav>
+  	</div>
+  	<div>
+  		<h2 id="footer-company">The Company</h2>
+  		<nav aria-labelledby="footer-company">
+  			<a href="#">...</a>
+  		</nav>
+  	</div>
+  	<div>
+  		<h2 id="footer-songs">Songs and Calls</h2>
+  		<nav aria-labelledby="footer-songs">
+  			<a href="#">...</a>
+  		</nav>
+  	</div>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Put in the non-content items. Put them in the order that makes sense for a screen reader.  -->
+<html lang="en">
+  <head>
+	  <meta charset="utf-8" />
+	  <title>Woodland Creatures Gazette</title>
+  </head>
+  <body>
+    <header>
+  	  <h1>
+  		  Woodland Creatures Gazette
+  		  <span>What's on the Vine</span>
+  	  </h1>
+      <time datetime="2022-12-04">Sun, December 4th 2022</time>
+      <!-- Search  -->
+      <form action="/search" role="search">
+      	<label for="search-input">Search articles</label>
+      	<input type="search" id="search-input" placeholder="Search…" name="q" />
+      	<input type="submit" value="Submit search" />
+      </form>
+      <!-- End Search -->
+    </header>
+    <nav aria-label="Main">
+       <ul>
+         <li><a href="/news">News</a></li>
+         <li><a href="/bear-cave">Bear Cave</a></li>
+         <li><a href="/hawks-view">Hawk's View</a></li>
+         <li><a href="/the-roots">The Roots</a></li>
+         <li><a href="/foraging-update">Foraging Upadate</a></li>
+       </ul>
+    </nav>
+    <main>
+  	  <section>
+  		  <h2>Top Stories</h2>
+  	  </section>
+  	  <section>
+  		  <h2>Latest News</h2>
+  	  </section>
+  	  <section>
+  		  <h2>Most Viewed</h2>
+  	  </section>
+  	  <section>
+  		  <h2>What's Going on in the Canopy?</h2>
+  	  </section>
+    </main>
+    <aside>
+      <h2>Subscribe to our Newsletter</h2>
+      <form action="/subscribe" method="post">
+    	  <label for="name-input">Name</label>
+    	  <input name="name" id="name-input" />
+    	  <label for="address-input">Address</label>
+    	  <input name="address" id="address-input" />
+    	  <input type="submit" value="Subscribe" />
+      </form>
+    </aside>
+    <footer>
+      <!-- label (no text visible) vs aria-labelledby (text visible, puts it in a group) https://stackoverflow.com/a/19616909/5946596 -->
+  	<div>
+  		<h2 id="footer-categories">Top Categories</h2>
+  		<nav aria-labelledby="footer-categories">
+  			<a href="#">...</a>
+  		</nav>
+  	</div>
+  	<div>
+  		<h2 id="footer-company">The Company</h2>
+  		<nav aria-labelledby="footer-company">
+  			<a href="#">...</a>
+  		</nav>
+  	</div>
+  	<div>
+  		<h2 id="footer-songs">Songs and Calls</h2>
+  		<nav aria-labelledby="footer-songs">
+  			<a href="#">...</a>
+  		</nav>
+  	</div>
+  </footer>
+  </body>
+</html>
