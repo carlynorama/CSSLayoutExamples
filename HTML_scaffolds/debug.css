@@ -1,0 +1,52 @@
+/* https://www.matuzo.at/blog/lang-attribute/ */
+/* https://matthiasott.com/notes/debugging-html-with-advanced-css-selectors */
+/* TODO: https://bitsofco.de/linting-html-using-css/*/
+html:not([lang]) {
+  border: 10px dotted red;
+}
+
+html:not([lang])::before {
+  content: 'lang attribute missing';
+  display: inline-block;
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.3em;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+html[lang=''],
+html[lang*=' '] {
+  border: 10px dotted red;
+}
+
+html:not(:lang(en)) {
+  border: 10px dotted red;
+}
+
+
+/* CSS */
+:is(ul, ol) > *:not(li) {
+  outline: 2px dotted red;
+}
+img:not([alt]) {
+   outline: 2px dotted red;
+ }
+
+ img[alt=""] {
+   outline: 2px dotted blue;
+ }
+
+
+*[style] {
+    border: 5px solid red; /* Style to make the elements noticeable */
+}
+
+a:not([href]),
+a[href="#"],
+a[href=""],
+a[href*="javascript:void(0)"] {
+  outline: 2px dotted red;
+}
